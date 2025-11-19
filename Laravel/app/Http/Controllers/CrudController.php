@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Allat;
 
 class CrudController extends Controller
 {
@@ -11,8 +12,8 @@ class CrudController extends Controller
      */
     public function index()
     {
-        $allat->Allat::all();
-        return view("crud", compact('allat'));
+        $allat=Allat::all();
+        return view("crud",compact('allat'));
     }
 
     /**

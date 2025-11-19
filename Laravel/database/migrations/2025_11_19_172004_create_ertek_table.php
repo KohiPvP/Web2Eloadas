@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('allat', function (Blueprint $table) {
+        Schema::create('ertek', function (Blueprint $table) {
             $table->id();
-            $table->string("nev");
-            $table->integer("ertekid")->references("id")->on("ertek")->onDelete("cascade");
-            $table->integer("ev");
-            $table->integer("katid")->references("id")->on("kategoria")->onDelete("cascade");
+            $table->integer("forint");
         });
     }
 
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('allat');
+        Schema::dropIfExists('ertek');
     }
 };

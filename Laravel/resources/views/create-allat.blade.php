@@ -2,9 +2,9 @@
 @section("title") Új Állat @endsection
 @section("content")
 <div>
-    <a href="{{route('allat.index')}}"> Vissza </a>
+    <a href="{{route('crud.index')}}"> Vissza </a>
 </div>
-<form action="{{route('allat.store')}}" method="POST">
+<form action="{{route('crud.store')}}" method="POST">
     @csrf
     @if(Session::has('success'))
     {{Session::get('success')}}
@@ -17,9 +17,16 @@
         <input type="text" name="title" id="title" value="{{old('title')}}">
     </div>
     <div>
-        <label for="description"> Description </label>
-        <textarea name="description" id="description">{{old('description')}}</textarea>
-        {!!$errors->first("description") !!}
+        <label for="description"> Kategória ID</label>
+        <input type="number" name="ertekid" id="ertekid" value="{{old('ertekid')}}">
+    </div>
+    <div>
+        <label for="title"> Év </label>
+        <input type="number" name="ev" id="ev" value="{{old('ev')}}">
+    </div>
+    <div>
+        <label for="title"> Title </label>
+        <input type="number" name="katid" id="katid" value="{{old('katid')}}">
     </div>
     <button type="submit"> Save </button>
     </form>

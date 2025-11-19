@@ -1,8 +1,8 @@
 @extends("master")
 @section("title") Módosítás @endsection
 @section("content")
-<a href="{{route('allat.index')}}"> Vissza </a>
-<form action="{{route('allat.update', $allat->id)}}" method="POST">
+<a href="{{route('crud.index')}}"> Vissza </a>
+<form action="{{route('crud.update', $allat->id)}}" method="POST">
 @csrf
 @method('PUT')
 @if(Session::has('success'))

@@ -8,7 +8,7 @@
     @if(Session::has('failed'))
         {{Session::get('failed')}}
     @endif
-    <a href="{{route('allat.create')}}"> Add New </a>
+    <a href="{{route('crud.create')}}"> Add New </a>
     <table>
         <thead>
             <th> Id </th>
@@ -28,11 +28,11 @@
                     <td> {{$al->ev}} </td>
                     <td> {{$al->katid}} </td>
                     <td>
-                        <form action="{{route('allat.destroy', $allat->id)}}" method="POST">
+                        <form action="{{route('crud.destroy', $al->id)}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <a href="{{route('allat.show', $allat->id)}}"> View </a>
-                        <a href="{{route('allat.edit', $allat->id)}}"> Edit </a>
+                        <a href="{{route('crud.show', $al->id)}}"> View </a>
+                        <a href="{{route('crud.edit', $al->id)}}"> Edit </a>
                         <button type="submit"> Delete </button>
                         </form>
                     </td>
