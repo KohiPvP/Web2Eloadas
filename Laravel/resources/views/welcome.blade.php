@@ -24,6 +24,8 @@
 							<li><a href="#two">What we do</a></li>
 							<li><a href="#three">Get in touch</a></li>
 							<li><a href="/db">Database</a></li>
+							<li><a href="/chart">Diagram</a></li>
+							<li><a href="/crud">CRUD</a></li>
 						</ul>
 					</nav>
 				</div>
