@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Middleware\Auth2;
+use App\Http\Controllers\CrudController;
+use App\Http\Controllers\ChartController;
 
 Route::get('/', function () {return Inertia::render('welcome');})->name('home');
 
@@ -18,3 +20,16 @@ require __DIR__.'/auth.php';
 Route::get('exercise1', function () { return view('view1'); });
 Route::get('introduction', function () { return view('introduction'); });
 
+Route::get('/messages', function () {
+    return view('welcome');
+});
+
+Route::get('/contact', function () {
+    return view('welcome');
+});
+
+Route::get('/db', 'App\Http\Controllers\ControllerDatabase@read');
+
+Route::get('/chart', [ChartController::class, 'OpenChartPage']);
+
+Route::resource('crud', CrudController::class);
