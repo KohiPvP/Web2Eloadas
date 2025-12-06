@@ -1,3 +1,4 @@
+<x-mainpage>
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -42,3 +43,4 @@
 </form>
 </body>
 </html>
+</x-mainpage>

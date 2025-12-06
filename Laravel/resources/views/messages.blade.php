@@ -1,3 +1,4 @@
+<x-mainpage>
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -31,3 +32,4 @@
 @endif
 </body>
 </html>
+</x-mainpage>

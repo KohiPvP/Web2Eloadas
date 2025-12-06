@@ -17,7 +17,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('admin', 'App\Http\Controllers\AdminController@adminPage');
 
     // Üzenetek menü – csak bejelentkezve
-    Route::get('messages', [MessageController::class, 'index'])
+    Route::get('/messages', [MessageController::class, 'index'])
         ->name('messages.index');
 
     Route::get('/contact', [ContactController::class, 'showForm'])

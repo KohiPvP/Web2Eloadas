@@ -1,6 +1,7 @@
 @extends("master")
 @section("title") Állatok @endsection
 @section("content")
+<x-mainpage>
 <div>
     @if(Session::has('success'))
         {{Session::get('success')}}
@@ -41,4 +42,5 @@
         @endif
     </tbody>
 </div>
+</x-mainpage>
 @endsection
